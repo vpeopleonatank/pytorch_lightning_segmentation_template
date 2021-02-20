@@ -1,0 +1,21 @@
+# @package _group_
+name: trainer
+
+gpus: 1
+accelerator: "ddp"
+precision: 16
+
+max_epochs: 3
+resume_from_checkpoint: null
+log_every_n_steps: 1
+
+# For deterministic runs
+benchmark: False
+deterministic: True
+
+# Limit batches for debugging
+fast_dev_run: False
+overfit_batches: 0.0
+limit_train_batches: 2
+limit_val_batches: 2
+limit_test_batches: 2

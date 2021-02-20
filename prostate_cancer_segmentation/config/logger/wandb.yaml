@@ -1,0 +1,6 @@
+# @package _group_
+name: wandb
+entity: cleargrasp2
+project: segmentation
+run_name: null # If None, will generate random name
+run_id: null # Pass run_id to resume logging to that run

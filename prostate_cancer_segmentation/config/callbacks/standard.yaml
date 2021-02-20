@@ -1,0 +1,26 @@
+# @package _group_
+name: standard
+
+early_stopping:
+  monitor: "Val/mIoU"
+  min_delta: 0.0005
+  patience: 10
+  mode: "max"
+  verbose: false
+
+checkpoints:
+  filename: "best" # PL Default: "{epoch}-{step}". `=` in filename can cause errors when parsing cli overrides.
+  save_last: true
+  save_top_k: 1
+  monitor: "Val/mIoU"
+  mode: "max"
+  period: 10
+  verbose: false
+
+log_media:
+  max_samples: 10
+  period_epoch: 1
+  period_step: 0
+  save_to_disk: true
+  save_latest_only: true
+  verbose: true
